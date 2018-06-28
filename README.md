@@ -19,3 +19,12 @@ This is a mini project that is part of my Grow with Google and Udacity Nanodegre
 4. Run the command "gulp" in your CLI window.
 5. Open the folder "dist".
 6. Open "index.html" in your preferred browser.
+
+#### Instructions on how to make the app production ready
+* You must have NPM installed on your machine.
+1. Clone this repository to your local machine.
+2. Open a CLI window and CD into the folder you put the repository in.
+3. Run "npm install" to install of the project dependencies.
+4. Run the command "gulp dist" in your CLI window.
+5. Open the folder "dist".
+6. Open "index.html" in your preferred browser.
