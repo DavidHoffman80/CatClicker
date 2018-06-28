@@ -1,0 +1,11 @@
+{
+  "name": "catclickerminiproject",
+  "version": "1.0.0",
+  "description": "A fun little app that tracks clicks on a picture of a cat.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dave Hoffman",
+  "license": "MIT"
+}
