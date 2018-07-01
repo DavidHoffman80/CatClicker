@@ -43,6 +43,13 @@ body {
 }
 
 .click-info-cont {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1rem;
+  justify-items: center;
 }
 
 .cat-pic-cont {
