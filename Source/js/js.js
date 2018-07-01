@@ -2,6 +2,8 @@
 
 (function() {
 
+
+
   let pics = [
     {
       file: 'images/kitty.jpg',
@@ -13,13 +15,19 @@
     }
   ];
 
-  let parentCont = document.querySelector('.cat-pic-cont');
+  let catPicNameParent = document.querySelector('.click-info-cont');
+  let catPicParent = document.querySelector('.cat-pic-cont');
 
-  pics.forEach(function(ele) {
-    let newElem = document.createElement('img');
-    newElem.src = ele.file;
-    newElem.classList.add(ele.name);
-    parentCont.appendChild(newElem);
+  pics.forEach(function(ele, index) {
+    let catPicName = document.createElement('h2');
+    catPicName.classList.add(`${ele.name}-heading`);
+    catPicName.textContent = ele.name;
+    catPicNameParent.appendChild(catPicName);
+
+    let newCatPic = document.createElement('img');
+    newCatPic.src = ele.file;
+    newCatPic.classList.add(ele.name);
+    catPicParent.appendChild(newCatPic);
   });
 
   // let catImg = document.querySelector('.cat-pic');
