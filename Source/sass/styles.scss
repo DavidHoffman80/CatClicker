@@ -1,0 +1,61 @@
+// CSS resets
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+
+.card-cont {
+  width: 80%;
+  padding-top: 1.5rem;
+  margin: 0 auto;
+  border-radius: 20px;
+  background: yellow;
+  color: black;
+    .header {
+      width: 80%;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+      border-radius: 20px;
+      background: lightgray;
+      text-align: center;
+      h1, h2 {
+        padding: 0 0 .5rem 0;
+      }
+      h2 {
+        padding-top: 1rem;
+      }
+    }
+}
+
+.click-info-cont {
+  text-align: center;
+  h2 {
+    padding: 1.5rem 0 0 0;
+  }
+}
+
+.cat-pic-cont {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 0;
+  img {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
