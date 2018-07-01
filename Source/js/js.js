@@ -9,11 +9,18 @@
     },
     {
       file: 'images/blueeyes.jpg',
-      name: 'Blue Eyes'
+      name: 'Blue-Eyes'
     }
   ];
 
-  
+  let parentCont = document.querySelector('.cat-pic-cont');
+
+  pics.forEach(function(ele) {
+    let newElem = document.createElement('img');
+    newElem.src = ele.file;
+    newElem.classList.add(ele.name);
+    parentCont.appendChild(newElem);
+  });
 
   // let catImg = document.querySelector('.cat-pic');
   // let clicks = 0;
