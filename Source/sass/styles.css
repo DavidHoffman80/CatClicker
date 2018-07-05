@@ -26,20 +26,23 @@ body {
   border-radius: 20px;
   background: yellow;
   color: black;
-    .header {
-      width: 80%;
-      margin: 0 auto;
-      padding: 1.5rem 1rem;
-      border-radius: 20px;
-      background: lightgray;
-      text-align: center;
-      h1, h2 {
-        padding: 0 0 .5rem 0;
-      }
-      h2 {
-        padding-top: 1rem;
-      }
-    }
+}
+
+.header {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  border-radius: 20px;
+  background: lightgray;
+  text-align: center;
+}
+
+.header h1, .header h2 {
+  padding: 0 0 .5rem 0;
+}
+
+.header h2 {
+  padding-top: 1rem;
 }
 
 .click-info-cont {
@@ -61,8 +64,9 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 1rem;
   align-items: center;
-  img {
-    width: 100%;
-    border-radius: 20px;
-  }
+}
+
+.cat-pic-cont img {
+  width: 100%;
+  border-radius: 20px;
 }

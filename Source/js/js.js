@@ -7,57 +7,58 @@
   let pics = [
     {
       file: 'images/kitty.jpg',
-      name: 'Fuzzy'
+      name: 'Fuzzy',
+      clicks: 0
     },
     {
       file: 'images/blueeyes.jpg',
-      name: 'Blue-Eyes'
+      name: 'Blue-Eyes',
+      clicks: 0
     }
   ];
 
   let catPicNameParent = document.querySelector('.click-info-cont');
-  let catPicParent = document.querySelector('.cat-pic-cont');
 
   pics.forEach(function(ele, index) {
+
+    catPicNameGenerator(ele);
+    
+    catPicGenerator(ele);
+
+    picEventListener(ele);
+  });
+
+  function catPicNameGenerator(ele, index) {
+    let currentPos = index + 1;
     let catPicNameCont = document.createElement('div');
+    catPicNameCont.classList.add(`set${currentPos}`);
     let catPicName = document.createElement('h2');
     catPicName.classList.add(`${ele.name}-heading`);
     catPicName.textContent = ele.name;
     catPicNameCont.appendChild(catPicName);
     let catClickTracker = document.createElement('h3');
     catClickTracker.classList.add(`${ele.name}-click-tracker`);
-    catClickTracker.innerHTML = `Clicks: <span class="${ele.name}-click-count">0</span>`;
+    catClickTracker.innerHTML = `Clicks: <span class="${ele.name}-click-count">${ele.clicks}</span>`;
     catPicNameCont.appendChild(catClickTracker);
     catPicNameParent.appendChild(catPicNameCont);
+  }
 
+  function catPicGenerator(ele) {
     let newCatPic = document.createElement('img');
     newCatPic.src = ele.file;
     newCatPic.classList.add(ele.name);
-    catPicParent.appendChild(newCatPic);
-  });
+    catPicNameParent.appendChild(newCatPic);
+  }
 
-  let catImg = document.querySelector('.cat-pic-cont');
-  let FuzzyClicks = 0;
-  let BlueEyesClicks = 0;
+  function picEventListener(ele) {
+    let targetElement = document.querySelector(`.${ele.name}`);
+    targetElement.addEventListener('click', (function(eleCopy) {
+      return function() {
+        eleCopy.clicks +=1;
+        let targetH3 = document.querySelector(`.${eleCopy.name}-click-count`);
+        targetH3.textContent = eleCopy.clicks;
+      }
+    })(ele));
+  }
   
-  catImg.addEventListener('click', function() {
-    if(event.target.className === pics[0].name) {
-      FuzzyClicks++;
-      fuzzyClickTracker();
-    } else if(event.target.className === pics[1].name) {
-      BlueEyesClicks++;
-      blueEyesClickTracker();
-    }
-  });
-
-  function fuzzyClickTracker() {
-    let fuzzyClickDisp = document.querySelector('.Fuzzy-click-count');
-    fuzzyClickDisp.innerText = FuzzyClicks;
-  }
-
-  function blueEyesClickTracker() {
-    let BlueEyesClickDisp = document.querySelector('.Blue-Eyes-click-count');
-    BlueEyesClickDisp.innerText = BlueEyesClicks;
-  }
-
 })();
