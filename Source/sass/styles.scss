@@ -1,72 +1,68 @@
-// CSS resets
-* {
-  box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background: white;
+  padding: 2rem;
   margin: 0;
-  padding: 0;
+  text-align: center;
 }
 
-.card-cont {
-  width: 80%;
-  padding-top: 1.5rem;
+#cat-list {
+  width: 40%;
+  list-style: none;
   margin: 0 auto;
-  border-radius: 20px;
-  background: yellow;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+#cat-list li {
+  padding: .25rem 0;
+  border-bottom: 1px darkgray solid;
+}
+
+#cat-list li:last-child {
+  border-bottom: none;
+}
+
+#cat-list li:hover {
+  cursor: pointer;
+}
+
+#cat-name {
+  font-size: 3rem;
+  color: blue;
+}
+
+#cat-count {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#cat {
+  margin-bottom: 1.5rem;
+}
+
+#admin {
+  width: 60px;
+  height: 30px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 5px;
+  border: none;
+  background: lightblue;
   color: black;
 }
 
-.header {
-  width: 80%;
+#admin:hover {
+  cursor: pointer;
+}
+
+#admin-area form {
+  display: none;
+}
+
+#admin-area form input {
+  display: block;
   margin: 0 auto;
-  padding: 1.5rem 1rem;
-  border-radius: 20px;
-  background: lightgray;
-  text-align: center;
 }
 
-.header h1, .header h2 {
-  padding: 0 0 .5rem 0;
-}
-
-.header h2 {
-  padding-top: 1rem;
-}
-
-.click-info-cont {
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 1rem;
-  justify-items: center;
-}
-
-.cat-pic-cont {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 1rem 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 1rem;
-  align-items: center;
-}
-
-.cat-pic-cont img {
-  width: 100%;
-  border-radius: 20px;
+#saveBtn, #cancelBtn {
+  margin-top: 1rem;
 }
